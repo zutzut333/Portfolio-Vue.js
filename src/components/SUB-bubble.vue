@@ -3,7 +3,7 @@
      <div v-if="Selected ===  'who'" id="whoBubble">
        <H1 style="font-size: xxx-large; font-weight: bold">Hi !</H1>
        <div id="whoText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
-       <img id="imgWho" alt="ourson" src="../assets/ourson.jpg">
+       <img id="imgWho" alt="Image pas encore définie" src="../assets/ourson.jpg">
     </div>
 
     <div v-else-if="Selected ===  'what'" id="whatBubble">

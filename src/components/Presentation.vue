@@ -49,7 +49,7 @@ export default {
   left: 10%;
   width: 40%;
   height: 80%;
-  color: cornsilk;
+  color: black;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
