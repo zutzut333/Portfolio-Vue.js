@@ -41,6 +41,7 @@ export default {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+
 }
 
 #questions {
@@ -49,7 +50,7 @@ export default {
   left: 10%;
   width: 40%;
   height: 80%;
-  color: black;
+  color: cornsilk;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
