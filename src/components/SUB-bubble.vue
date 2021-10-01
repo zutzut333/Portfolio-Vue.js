@@ -1,7 +1,7 @@
 <template>
 
      <div v-if="Selected ===  'who'" id="whoBubble">
-       <H1 style="font-size: xxx-large; font-weight: bold">Hi !</H1>
+       <div style="font-size: xxx-large; font-weight: bold">Hi !</div>
        <div id="whoText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
     </div>
 
@@ -68,7 +68,7 @@ export default {
   position: relative;
   left: 0;
   top: 15%;
-  transition-duration: 1.5s;
+  transition-duration: 2s;
   z-index: 40;
 }
 

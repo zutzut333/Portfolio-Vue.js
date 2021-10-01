@@ -1,79 +1,106 @@
-<template>
 
-  <div id="arrowAnim">
-    <div class="arrowSliding">
-      <div class="arrow"></div>
-    </div>
-    <div class="arrowSliding delay1">
-      <div class="arrow"></div>
-    </div>
-    <div class="arrowSliding delay2">
-      <div class="arrow"></div>
-    </div>
-    <div class="arrowSliding delay3">
-      <div class="arrow"></div>
+<template>
+  <div class="center-con">
+    <div class="round">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </div>
-
 </template>
 
 <script>
 export default {
-  name: "downArrows"
+  name: "downArrows",
+
+  methods: {
+    goto(refName) {
+      let top = element.offsetTop;
+      window.scrollTo(100 %, top);
+    }}
 }
+
+
 </script>
 
 <style scoped>
 
-#arrowAnim {
-  width: 5%;
-  height: 45%;
-  position: absolute;
-  left: 50%;
-  bottom: 10%;
-
+body {
+  background: #000;
 }
 
-.arrow {
-  width: 100%;
-  height: 100%;
-  border: 15px solid;
-  border-color: black transparent transparent black;
+.center-con {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
+.round {
+  position: relative;
+  border: 3px solid #fff;
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  top: 41%
+}
+
+span {
+  z-index: 999;
+  height: 3px;
+  margin:1px;
+  width: 30px;
+  background: #fff;
+  transition: 0.4s ease;
+}
+
+span:first-child {
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 25%;
+  bottom: 35%;
+}
+
+span:nth-child(2) {
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 45%;
+  bottom: 35%;
+}
+
+span:nth-child(3) {
+  display: block;
+  position: absolute;
+  transform: rotate(45deg);
+  left: 25%;
+  bottom: 54%;
+}
+
+span:nth-child(4) {
+  display: block;
+  position: absolute;
+  transform: rotate(-45deg);
+  left: 45%;
+  bottom: 54%;
+}
+
+.round:hover span:nth-child(1) {
+  transform: rotate(-135deg);
+}
+
+.round:hover span:nth-child(2) {
+  transform: rotate(135deg);
+}
+
+.round:hover span:nth-child(3) {
   transform: rotate(225deg);
 }
 
-
-.arrowSliding {
-  position: absolute;
-  -webkit-animation: slide 4s linear infinite;
-  animation: slide 4s linear infinite;
-}
-
-.delay1 {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
-}
-.delay2 {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
-}
-.delay3 {
-  -webkit-animation-delay: 3s;
-  animation-delay: 3s;
-}
-
-
-@-webkit-keyframes slide {
-  0% { opacity:0; transform: translateY(-30px); }
-  20% { opacity:1; transform: translateY(-18px); }
-  80% { opacity:1; transform: translateY(30px); }
-  100% { opacity:0; transform: translateY(18px); }
-}
-@keyframes slide {
-  0% { opacity:0; transform: translateY(-30px); }
-  20% { opacity:1; transform: translateY(-18px); }
-  80% { opacity:1; transform: translateY(18px); }
-  100% { opacity:0; transform: translateY(30px); }
+.round:hover span:nth-child(4) {
+  transform: rotate(-225deg);
 }
 
 </style>

@@ -8,9 +8,8 @@
     </section>
 
     <section >
-      <div id="upTransition">
-        <down-arrows/>
-      </div>
+      <div id="upTransition"></div>
+      <down-arrows/>
       <div id="downTransition"></div>
     </section>
 
@@ -36,8 +35,8 @@ export default {
 #upTransition{
   background-image: url("../assets/texture/upWave.svg");
   position: absolute;
-  top: 65%;
-  height: 35%;
+  top: 64%;
+  height: 36%;
   width: 100%;
   left: 0;
 }
@@ -45,8 +44,8 @@ export default {
 #downTransition{
   background-image: url("../assets/texture/downWave.svg");
   position: absolute;
-  top: 65%;
-  height: 35%;
+  top: 100%;
+  height: 45%;
   width: 100%;
   left: 0;
 }
