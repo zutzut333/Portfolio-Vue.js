@@ -3,7 +3,6 @@
      <div v-if="Selected ===  'who'" id="whoBubble">
        <H1 style="font-size: xxx-large; font-weight: bold">Hi !</H1>
        <div id="whoText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
-       <img id="imgWho" alt="Image pas encore définie" src="../assets/ourson.jpg">
     </div>
 
     <div v-else-if="Selected ===  'what'" id="whatBubble">
@@ -25,33 +24,18 @@ export default {
 }
 
 </script>
-
 <style scoped>
 
 #whoBubble{
-border-radius: 100%;
-  border-color: black;
-  border-style: double;
-  border-width: 10px;
-  border-top-style: solid;
-  background-color: rgba(255,255,255,0.45); ;
+  border-radius: 78% 22% 46% 54% / 21% 67% 33% 79% ;
+  background: linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173));
   width: 60%;
   height: 70%;
   position: relative;
   top: 8%;
   left: 15%;
-  transition-duration: 1.5s;
-}
-#imgWho{
-  border-radius: 100%;
-  border-color: black;
-  border-style: solid;
-  border-width: 7px;
-  width: 45%;
-  height: 50%;
-  position: relative;
-  left: 22%;
-  bottom: 30%;
+  transition-duration: 2s;
+  z-index: 40;
 }
 #whoText{
   height: 60%;
@@ -65,33 +49,27 @@ border-radius: 100%;
 }
 
 #whatBubble{
-  border-radius: 100%;
-  border-color: black;
-  border-style: double;
-  border-width: 10px;
-  border-left-style: solid;
-  background-color: rgba(255,255,255,0.45);
+  border-radius: 23% 77% 15% 85% / 70% 19% 81% 30% ;
+  background: linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173));
   width: 60%;
   height: 70%;
   position: relative;
   left: 20%;
   top: 30%;
-  transition-duration: 1.5s;
+  transition-duration: 2s;
+  z-index: 40;
 }
 
 #whyBubble{
-  border-radius: 100%;
-  border-color: black;
-  border-style: double;
-  border-width: 10px;
-  border-bottom-style: solid;
-  background-color: rgba(255,255,255,0.45); ;
+  border-radius: 50% 50% 66% 34% / 20% 31% 69% 80% ;
+  background: linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173));
   width: 60%;
   height: 70%;
   position: relative;
   left: 0;
   top: 15%;
   transition-duration: 1.5s;
+  z-index: 40;
 }
 
 </style>
