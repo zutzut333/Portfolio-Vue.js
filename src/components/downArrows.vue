@@ -1,7 +1,8 @@
 
 <template>
   <div class="center-con">
-    <div class="round">
+    <button id="buttonScroll" @click="scrollToElement"></button>
+    <div class="round" >
       <span></span>
       <span></span>
       <span></span>
@@ -15,10 +16,15 @@ export default {
   name: "downArrows",
 
   methods: {
-    goto(refName) {
-      let top = element.offsetTop;
-      window.scrollTo(100 %, top);
+    scrollToElement() {
+      const el = this.$refs.scrollToMe;
+
+      if (el) {
+        el.scrollIntoView({behavior: 'smooth'});
+      }
     }}
+
+
 }
 
 
@@ -28,6 +34,13 @@ export default {
 
 body {
   background: #000;
+}
+
+#buttonScroll{
+  position: relative;
+  top: 41%;
+  width: 100px;
+  height: 100px;
 }
 
 .center-con {
