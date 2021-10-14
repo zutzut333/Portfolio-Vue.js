@@ -1,6 +1,10 @@
 <template>
 
-     <div v-if="Selected ===  'who'" id="whoBubble">
+    <div v-if="Selected ===  'undefined'" id="bubDepartPlace">
+      <div style></div>
+    </div>
+
+     <div v-else-if="Selected ===  'who'" id="whoBubble">
        <div style="font-size: xxx-large; font-weight: bold">Hi !</div>
        <div id="whoText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
     </div>

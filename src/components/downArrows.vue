@@ -1,13 +1,12 @@
 
 <template>
   <div class="center-con">
-    <button id="buttonScroll" @click="scrollToElement"></button>
-    <div class="round" >
+     <div class="round" @click="scrollToElement" >
       <span></span>
       <span></span>
       <span></span>
       <span></span>
-    </div>
+     </div>
   </div>
 </template>
 
@@ -36,12 +35,6 @@ body {
   background: #000;
 }
 
-#buttonScroll{
-  position: relative;
-  top: 41%;
-  width: 100px;
-  height: 100px;
-}
 
 .center-con {
   display: flex;
