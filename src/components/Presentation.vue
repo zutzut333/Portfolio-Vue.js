@@ -5,7 +5,7 @@
       <h1 id="what" @mouseover="SelectedTheme = 'what'">What I know ?</h1>
       <h1 id="why" @mouseover="SelectedTheme = 'why'">Why me ?</h1>
     </div>
-    <div id="bulles">
+    <div id="bubble">
       <SUBBubble :Selected="SelectedTheme"/>
     </div>
   </div>
@@ -30,11 +30,28 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-#bulles{
+@media (min-width:640px) {
+  #who{
+    top: 10%;
+    width: 55%;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 1007px){
+  #what{
+
+  }
+}
+
+@media (max-width:1008px){
+  #why{
+
+  }
+}
+
+#bubble{
   position: absolute;
-  top: 10%;
   right: 0;
-  width: 45%;
   height: 80%;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
@@ -96,6 +113,7 @@ export default {
   font-size: xxx-large;
   border-radius: 100px;
   transition-duration: 0.6s;
+  z-index:2
 }
 
 #why:hover {
@@ -103,7 +121,7 @@ export default {
   color: white;
 }
 
-#bulles {
+#bubble {
   position: absolute;
 
 
