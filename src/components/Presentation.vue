@@ -32,27 +32,28 @@ export default {
 
 @media (min-width:640px) {
   #who{
-    top: 10%;
-    width: 55%;
+
   }
 }
 
 @media (min-width: 641px) and (max-width: 1007px){
-  #what{
+  #who{
 
   }
 }
 
 @media (max-width:1008px){
-  #why{
+  #who{
 
   }
 }
 
 #bubble{
   position: absolute;
+  top: 7%;
   right: 0;
   height: 80%;
+  width: 40%;
   -webkit-user-select: none;
   -webkit-touch-callout: none;
   -moz-user-select: none;
@@ -78,7 +79,7 @@ export default {
 #who {
   position: relative;
   top: 10%;
-  width: 40%;
+  width: 55%;
   left: 60%;
   font-size: xxx-large;
   border-radius: 100px;
@@ -119,12 +120,6 @@ export default {
 #why:hover {
   background-color: black;
   color: white;
-}
-
-#bubble {
-  position: absolute;
-
-
 }
 
 </style>
