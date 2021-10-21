@@ -20,7 +20,7 @@ export default {
   components: {SUBBubble},
   data() {
     return {
-      SelectedTheme: undefined,
+      SelectedTheme: 'undefined',
 
     }
   }

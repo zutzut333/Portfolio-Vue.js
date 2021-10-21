@@ -13,6 +13,19 @@
   color: #2c3e50;
 }
 
+/* Works on Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: darkslategray;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkslateblue;
+  border-radius: 20px;
+}
 </style>
 
 <script>

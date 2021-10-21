@@ -1,8 +1,6 @@
 <template>
 
-    <div v-if="Selected ===  'undefined'" id="bubDepartPlace">
-      <div style></div>
-    </div>
+    <div v-if="Selected === 'undefined'" id="bubDepartPlace"/>
 
      <div v-else-if="Selected ===  'who'" id="whoBubble">
        <div style="font-size: xxx-large; font-weight: bold">Hi !</div>
@@ -29,6 +27,16 @@ export default {
 
 </script>
 <style scoped>
+
+#bubDepartPlace{
+  border-radius:100%;
+  background: linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173));
+  width: 30%;
+  height: 30%;
+  position: relative;
+  top: 40%;
+  left: 10%;
+}
 
 #whoBubble{
   border-radius: 78% 22% 46% 54% / 21% 67% 33% 79% ;

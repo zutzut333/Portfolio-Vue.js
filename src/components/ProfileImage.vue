@@ -1,10 +1,12 @@
 <template>
-<div id="ProfileImage"/>
+  <div id="containerImage">
+      <img id="ProfileImage" src="../assets/Spike.gif" alt="Profile Image">
+  </div>
 </template>
 
 <script>
 export default {
-  name: "ProfileImage"
+  name: "ProfileImage",
 }
 </script>
 
@@ -12,7 +14,10 @@ export default {
 
 @media (min-width:640px) {
   #ProfileImage{
-
+    position: relative;
+    top: 0;
+    border-radius: 100%;
+    width: 100%;
   }
 }
 
@@ -28,13 +33,13 @@ export default {
   }
 }
 
-
-#ProfileImage{
-  border-radius: 100%;
+#containerImage{
+  position: absolute;
   width: 20%;
-  height:20%;
-  background-image: url("../assets/Spike.gif");
-}
+  height: 20%;
+  top: 20%;
+  left: 10%;
 
+}
 
 </style>
