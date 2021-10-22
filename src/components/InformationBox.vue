@@ -4,9 +4,6 @@
   <h1 id="upChoose" @mouseover="SideChoose = 'up'">More Information ?</h1>
   <h1 id="downChoose" @mouseover="SideChoose = 'down'">Contact</h1>
   </div>
-  <div id="ChossedSide">
-    <SUB-Choose :Selected="SideChoose"/>
-  </div>
 </div>
 </template>
 
@@ -34,9 +31,21 @@ export default {
 
 #ChooseBox{
  position: relative;
-  top: 20%;
-  left: 20%;
-
+  width: 40%;
+  height: 100%;
 }
+
+#upChoose{
+  position: relative;
+  top: 30%;
+  color: cornsilk;
+}
+
+#downChoose{
+  position: relative;
+  top: 35%;
+  color: cornsilk;
+}
+
 
 </style>
