@@ -4,12 +4,20 @@
   <h1 id="upChoose" @mouseover="SideChoose = 'up'">More Information ?</h1>
   <h1 id="downChoose" @mouseover="SideChoose = 'down'">Contact</h1>
   </div>
+  <SUBChoose :Selected="SideChoose" />
 </div>
 </template>
 
 <script>
+import SUBChoose from "@/components/SUB-Choose";
 export default {
-  name: "InformationBox"
+  name: "InformationBox",
+  components: {SUBChoose},
+  data() {
+    return {
+      SideChoose: 'undefined',
+    }
+  }
 }
 </script>
 
