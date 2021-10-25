@@ -3,12 +3,11 @@
   <div v-if="SideChoose === 'undefined'" id="allBlack"/>
 
   <div v-else-if="SideChoose ===  'up'" id="upChoose">
-    <div style="font-size: xxx-large; font-weight: bold">Hi !</div>
-    <div id="whoText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
+    <div id="upText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
   </div>
 
   <div v-else-if="SideChoose ===  'down'" id="downChoose">
-    <div id="whatText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
+    <div id="downText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
   </div>
 
 
@@ -27,6 +26,14 @@ export default {
 <style scoped>
 
 #allBlack{
+
+}
+
+#upText{
+  
+}
+
+#downText{
 
 }
 

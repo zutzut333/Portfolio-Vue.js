@@ -1,8 +1,12 @@
 <template>
 <div id="parallelogram">
   <div id="ChooseBox">
-  <h1 id="upChoose" @mouseover="SideChoose = 'up'">More Information ?</h1>
-  <h1 id="downChoose" @mouseover="SideChoose = 'down'">Contact</h1>
+  <div id="upChoose" @mouseover="SideChoose = 'up'">
+    <h1 class="BoxText">More Information ?</h1>
+  </div>
+  <div id="downChoose" @mouseover="SideChoose = 'down'">
+    <h1 class="BoxText">Contact</h1>
+  </div>
   </div>
   <SUBChoose :Selected="SideChoose" />
 </div>
@@ -45,14 +49,23 @@ export default {
 
 #upChoose{
   position: relative;
-  top: 30%;
+  height: 50%;
   color: cornsilk;
+  border: 1px solid #2c3e50;
+  border-top-left-radius: 22%;
 }
 
 #downChoose{
   position: relative;
-  top: 35%;
+  height: 49%;
   color: cornsilk;
+  border: 1px solid #2c3e50;
+  border-bottom-left-radius: 21%;
+}
+
+.BoxText{
+  position: relative;
+  top: 30%;
 }
 
 
