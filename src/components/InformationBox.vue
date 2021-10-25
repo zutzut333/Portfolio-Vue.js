@@ -1,14 +1,14 @@
 <template>
 <div id="parallelogram">
   <div id="ChooseBox">
-  <div id="upChoose" @mouseover="SideChoose = 'up'">
+  <div id="upChoose" @mouseover="SideChoose = 'up'; changeColorToRed()">
     <h1 class="BoxText">More Information ?</h1>
   </div>
-  <div id="downChoose" @mouseover="SideChoose = 'down'">
+  <div id="downChoose" @mouseover="SideChoose = 'down' ; changeColorToBlue()">
     <h1 class="BoxText">Contact</h1>
   </div>
   </div>
-  <SUBChoose :Selected="SideChoose" />
+  <SUBChoose :SideChoose="SideChoose" />
 </div>
 </template>
 
@@ -20,6 +20,14 @@ export default {
   data() {
     return {
       SideChoose: 'undefined',
+    }
+  },
+  methods:{
+    changeColorToRed(){
+      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173))"
+    },
+    changeColorToBlue(){
+      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom right, rgb(250, 1, 154), rgb(56, 34, 173))"
     }
   }
 }

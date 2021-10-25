@@ -8,7 +8,7 @@
     </div>
 
     <div v-else-if="Selected ===  'what'" id="whatBubble">
-      <div id="whatText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
+      <div id="whatText"> &nbsp; I3ch, <br>-end<br>developer from Switzerland </div>
     </div>
 
     <div v-else-if="Selected ===  'why'" id="whyBubble">

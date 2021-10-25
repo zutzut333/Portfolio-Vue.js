@@ -1,17 +1,24 @@
 <template>
-<div>
-  <div v-if="SideChoose === 'undefined'" id="allBlack"/>
 
-  <div v-else-if="SideChoose ===  'up'" id="upChoose">
-    <div id="upText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
+  <div v-if="SideChoose ===  'up'" class="boxText">
+    <div id="upText">
+   <ul>
+     <li>GitHub     //git</li>
+     <li>---------</li>
+     <li>---------</li>
+   </ul>
+    </div>
   </div>
 
-  <div v-else-if="SideChoose ===  'down'" id="downChoose">
-    <div id="downText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
+  <div v-else-if="SideChoose ===  'down'" class="boxText">
+    <div id="downText">
+      <ul>
+        <li>E-mail     Jam@mole.ch</li>
+        <li>Phone       +41 79 868 39 58</li>
+        <li>---------</li>
+      </ul> </div>
   </div>
 
-
-</div>
 </template>
 
 <script>
@@ -19,22 +26,28 @@ export default {
   name: "SUB-Choose",
   props: {
     SideChoose: String,
-  }
+  },
+
 }
 </script>
 
 <style scoped>
 
-#allBlack{
-
+.boxText{
+  position: relative;
+  width: 60%;
+  height: 20%;
+  left: 40%;
+  top: -100%;
 }
 
 #upText{
-  
+height: 100%;
 }
 
 #downText{
-
+height: 100%;
 }
+
 
 </style>
