@@ -1,6 +1,6 @@
 <template>
   <div id="containerImage">
-      <img id="ProfileImage" src="../assets/Spike.gif" alt="Profile Image">
+      <img id="ProfileImage" src="../assets/ProfileImage.jpg" alt="Profile Image">
   </div>
 </template>
 

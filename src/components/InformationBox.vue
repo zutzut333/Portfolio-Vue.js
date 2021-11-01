@@ -24,7 +24,7 @@ export default {
   },
   methods:{
     changeColorToRed(){
-      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173))"
+      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173))" 
     },
     changeColorToBlue(){
       document.getElementById("parallelogram").style.background = "linear-gradient(to bottom right, rgb(250, 1, 154), rgb(56, 34, 173))"
