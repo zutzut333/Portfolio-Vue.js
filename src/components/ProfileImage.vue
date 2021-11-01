@@ -15,9 +15,12 @@ export default {
 @media (min-width:640px) {
   #ProfileImage{
     position: relative;
-    top: 0;
+    top: 15%;
     border-radius: 100%;
-    width: 100%;
+    width: 60%;
+    border-color: #e2bf00;
+    border-style: solid;
+    border-width: 4px;
   }
 }
 
@@ -35,11 +38,12 @@ export default {
 
 #containerImage{
   position: absolute;
-  width: 20%;
-  height: 20%;
-  top: 20%;
-  left: 10%;
-
+  width: 30%;
+  height: 50%;
+  top: 15%;
+  left: 5%;
+  background-color: black;
+  border-radius: 100%;
 }
 
 </style>

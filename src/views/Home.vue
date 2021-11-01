@@ -2,6 +2,7 @@
   <div class="home">
 
     <section id="First-section">
+      <LanguageSelector/>
       <div class="home-present">
         <Presentation/>
       </div>
@@ -28,6 +29,7 @@ import Presentation from '@/components/Presentation.vue'
 import downArrows   from '@/components/downArrows.vue'
 import ProfileImage   from '@/components/ProfileImage.vue'
 import InformationBox from '@/components/InformationBox.vue'
+import LanguageSelector from "@/components/LanguageSelector";
 
 export default {
   name: 'Home',
@@ -35,7 +37,8 @@ export default {
     Presentation,
     downArrows,
     ProfileImage,
-    InformationBox
+    InformationBox,
+    LanguageSelector
   }
 }
 </script>
