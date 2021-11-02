@@ -39,6 +39,9 @@ export default {
     ProfileImage,
     InformationBox,
     LanguageSelector
+  },
+  beforeCreate: function () {
+
   }
 }
 </script>

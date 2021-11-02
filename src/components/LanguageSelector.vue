@@ -1,45 +1,75 @@
 <template>
-<div id="greyBox" style="display: flex; flex-direction: row; justify-content:space-between; position: relative;">
-  <div style="width:2rem;height:2rem; background-color:#06A8FF; border-radius:9999px; position: absolute; transform: translate(10rem); transition-duration: 2s;"></div>
-  <div id="FR" style="width:2rem; height:2rem;">FR</div>
-  <div id="ENG" style="width:2rem; height:2rem;">ENG</div>
-  <div id="PYC" style="width:2rem; height:2rem;">PYC</div>
+<div id="containerLanguagesBubble">
+  <div @mouseover="addBorder('FR')" @mouseleave="removeBorder('FR')" @mouseclick="changeLanguage('FR')" id="FR"><h2 class="centerText">FR</h2></div>
+  <div @mouseover="addBorder('ENG')" id="ENG"><h2 class="centerText">ENG</h2></div>
+  <div @mouseover="addBorder('PYC')" id="PYC"><h2 class="centerText">PYC</h2></div>
 </div>
 </template>
 
 <script>
+
 export default {
-  name: "LanguageSelector"
+  name: "LanguageSelector",
+
+  methods: {
+    addBorder(overChoose) {
+      document.getElementById(overChoose).style.border = " 1px solid white;";
+    },
+    removeBorder(overChoose) {
+      document.getElementById(overChoose).style.border = " none;";
+    },
+    changeLanguage(overChoose) {
+
+    }
+  }
 }
+
 </script>
 
 <style scoped>
 
-#greyBox{
-  background-color: lightgrey;
-  position: relative;
+#containerLanguagesBubble{
+  position: absolute;
   top: 5%;
-  width: 10%;
-  height: 3%;
+  width: 15%;
+  height: 20%;
   left: 5%;
-  border-style: solid;
-  border-color: black;
-  border-radius: 9999px;
 }
 
 #FR {
-  background-color: gray;
+  position: relative;
+  top: 5%;
+  left: 19%;
+  background-color: black;
   border-radius:100%;
+  width:30%;
+  height:40%
 }
 
 #ENG {
-  background-color: gray;
+  position: relative;
+  top: 5%;
+  left: -5%;
+  background-color: black;
   border-radius:100%;
+  width:30%;
+  height:40%
 }
 
 #PYC {
-  background-color: gray;
+  position: relative;
+  top: -45%;
+  left: 42%;
+  background-color: black;
   border-radius:100%;
+  width:30%;
+  height:40%
+}
+
+.centerText{
+  position: relative;
+  top: 30%;
+  color: slategray;
 }
 
 </style>
