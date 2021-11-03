@@ -1,10 +1,27 @@
 <template>
   <div class="Presentation">
+
     <div id="questions">
-      <h1 id="who" @mouseover="SelectedTheme = 'who'">Who am I ?</h1>
-      <h1 id="what" @mouseover="SelectedTheme = 'what'">What I know ?</h1>
-      <h1 id="why" @mouseover="SelectedTheme = 'why'">Why me ?</h1>
+      <table id="who" @mouseover="SelectedTheme = 'who'">
+        <tr v-if="language === 'ENG'">Who am I ? </tr>
+        <tr v-if="language === 'PYC'">Кто я ? </tr>
+        <tr v-if="language === 'FR'"> Qui suis-je ? </tr>
+      </table>
+      <table id="what" @mouseover="SelectedTheme = 'what'">
+        <tr v-if="language === 'ENG'">What I know ? </tr>
+        <tr v-if="language === 'PYC'">Что я знаю ? </tr>
+        <tr v-if="language === 'FR'"> Qui sais-je ? </tr>
+      </table>
+      <table id="why" @mouseover="SelectedTheme = 'why'">
+        <tr v-if="language === 'ENG'">Why me ? </tr>
+        <tr v-if="language === 'PYC'">Почему я ? </tr>
+        <tr v-if="language === 'FR'"> Pourquoi moi ? </tr>
+      </table>
+
     </div>
+
+
+
     <div id="bubble">
       <SUBBubble :Selected="SelectedTheme"/>
     </div>
@@ -79,6 +96,7 @@ export default {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  font-weight: bold;
 }
 
 #who {

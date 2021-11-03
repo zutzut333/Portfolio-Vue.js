@@ -2,10 +2,14 @@
 <div id="parallelogram">
   <div id="ChooseBox">
   <div id="upChoose" @mouseover="SideChoose = 'up'; changeColorToRed()">
-    <h1 class="BoxText">More Information ?</h1>
+    <h1 class="BoxText" v-if="language === 'ENG'">More Information ?</h1>
+    <h1 class="BoxText" v-if="language === 'PYC'">Больше информации ?</h1>
+    <h1 class="BoxText" v-if="language === 'FR'"> Plus d'information ?</h1>
   </div>
   <div id="downChoose" @mouseover="SideChoose = 'down' ; changeColorToBlue()">
-    <h1 class="BoxText">Contact</h1>
+    <h1 class="BoxText" v-if="language === 'ENG'">Contact</h1>
+    <h1 class="BoxText" v-if="language === 'PYC'">Контакт</h1>
+    <h1 class="BoxText" v-if="language === 'FR'"> Contact</h1>
   </div>
   </div>
   <SUBChoose :SideChoose="SideChoose" />
@@ -22,12 +26,17 @@ export default {
       SideChoose: 'undefined',
     }
   },
-  methods:{
-    changeColorToRed(){
-      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom left, rgb(250, 1, 154), rgb(56, 34, 173))"
+  methods: {
+    changeColorToRed() {
+      document.getElementById("parallelogram").style.background = "linear-gradient(to top left, rgb(70,50,3), rgb(104,10,218))"
     },
-    changeColorToBlue(){
-      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom right, rgb(250, 1, 154), rgb(56, 34, 173))"
+    changeColorToBlue() {
+      document.getElementById("parallelogram").style.background = "linear-gradient(to bottom left, rgb(70,50,3), rgb(104,10,218))"
+    }
+  },
+  computed: {
+    language() {
+      return this.$store.state.language;
     }
   }
 }

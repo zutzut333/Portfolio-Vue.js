@@ -51,7 +51,7 @@ export default {
 @media (max-width:1008px) {
   #upTransition{
  position: absolute;
-  top: 60%;
+  top: 65%;
   height: 37%;
   width: 100%;
   left: 0;

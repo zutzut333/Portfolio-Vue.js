@@ -4,15 +4,25 @@
 
      <div v-else-if="Selected ===  'who'" id="whoBubble">
        <div style="font-size: xxx-large; font-weight: bold">Hi !</div>
-       <div id="whoText"> &nbsp; I am Jean Bösch, <br>an 18-year-old  front-end<br>developer from Switzerland </div>
+       <table>
+         <tr  class="whoText" v-if="language === 'ENG'"> &nbsp; I am Jean Bösch, <br>an 18-year-old <br> front-end developer from Switzerland </tr>
+         <tr  class="whoText" v-else-if="language === 'FR'"> &nbsp; je m'appelle <br> Jean Bösch, un étudiant développeur <br> front-end de 18ans</tr>
+         <tr  class="whoText" v-else-if="language === 'PYC'"> &nbsp; меня зовут Жан Бёш, я 18-летний студент, занимающийся фронтенд-разработкой. </tr>
+       </table>
     </div>
 
     <div v-else-if="Selected ===  'what'" id="whatBubble">
-      <div id="whatText"> &nbsp; I3ch, <br>-end<br>developer from Switzerland </div>
+      <table style="height: 100%">
+         <tr class="whatText" v-if="language === 'ENG'"> I3ch, <br>-end<br>developer from Switzerland </tr>
+         <tr class="whatText" v-if="language === 'FR'">  J'utilise Vue.js en <br> front-end. mais j'ai aussi compétences Back-end en SQL/PHP</tr>
+         <tr class="whatText" v-if="language === 'PYC'"> I3ch, <br>-end<br>developer from Switzerland </tr>
+      </table>
     </div>
 
     <div v-else-if="Selected ===  'why'" id="whyBubble">
-    {{Selected}}
+      <tr v-if="language === 'ENG'"> I3ch, <br>-end<br>developer from Switzerland </tr>
+      <tr v-if="language === 'FR'"> I3ch, <br>-end<br>developer from Switzerland </tr>
+      <tr v-if="language === 'PYC'"> I3ch, <br>-end<br>developer from Switzerland </tr>
     </div>
 
 </template>
@@ -22,6 +32,11 @@ export default {
   name: "SUB-bubble",
   props: {
     Selected: String,
+  },
+  computed: {
+    language(){
+      return this.$store.state.language ;
+    }
   }
 }
 
@@ -49,16 +64,15 @@ export default {
   transition-duration: 2s;
   z-index: 40;
 }
-#whoText{
-  height: 60%;
+.whoText{
   line-height: 120%;
   word-spacing: 5px;
   font-size: 33px;
-  text-align: left;
   font-family: Arial,serif ;
   position: relative;
-  left: 8%;
+  top: 10%;
 }
+
 
 #whatBubble{
   border-radius: 23% 77% 15% 85% / 70% 19% 81% 30% ;
@@ -70,6 +84,15 @@ export default {
   top: 30%;
   transition-duration: 2s;
   z-index: 40;
+}
+
+.whatText{
+  line-height: 120%;
+  word-spacing: 5px;
+  font-size: 33px;
+  font-family: Arial,serif ;
+  position: relative;
+  top: 10%;
 }
 
 #whyBubble{

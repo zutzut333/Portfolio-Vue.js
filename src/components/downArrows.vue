@@ -29,6 +29,7 @@ export default {
   width: 6%;
   height: 20%;
   left: 50%;
+  z-index: 6;
 }
 
 .arrow{
