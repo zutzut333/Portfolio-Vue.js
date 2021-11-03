@@ -1,8 +1,10 @@
 <template>
 <div id="containerLanguagesBubble">
-  <div @mouseover="addBorder('FR')" @mouseleave="removeBorder('FR')" @mouseclick="changeLanguage('FR')" id="FR"><h2 class="centerText">FR</h2></div>
-  <div @mouseover="addBorder('ENG')" id="ENG"><h2 class="centerText">ENG</h2></div>
-  <div @mouseover="addBorder('PYC')" id="PYC"><h2 class="centerText">PYC</h2></div>
+  <div id="PYC" @mouseover="addBorder('PYC')" @mouseleave="removeBorder('PYC')" @click="changeLanguage('PYC')"><h2 class="centerText">PYC</h2></div>
+
+  <div id="FR"  @mouseover="addBorder('FR')"  @mouseleave="removeBorder('FR')"  @click="changeLanguage('FR')"><h2 class="centerText">FR</h2></div>
+
+  <div id="ENG" @mouseover="addBorder('ENG')" @mouseleave="removeBorder('ENG')" @click="changeLanguage('ENG')"><h2 class="centerText">ENG</h2></div>
 </div>
 </template>
 
@@ -13,13 +15,16 @@ export default {
 
   methods: {
     addBorder(overChoose) {
-      document.getElementById(overChoose).style.border = " 1px solid white;";
+      document.getElementById(overChoose).style.border = "30px solid rgba(255, 255, 255, .8)";
+      document.getElementById(overChoose).style.color = "white";
     },
     removeBorder(overChoose) {
-      document.getElementById(overChoose).style.border = " none;";
+      document.getElementById(overChoose).style.border = "none";
+      document.getElementById(overChoose).style.color = "cornsilk";
     },
-    changeLanguage(overChoose) {
-
+    changeLanguage(SelectedLanguage) {
+      console.log(SelectedLanguage);
+        this.$store.commit('setLanguage', SelectedLanguage );
     }
   }
 }
@@ -31,19 +36,26 @@ export default {
 #containerLanguagesBubble{
   position: absolute;
   top: 5%;
-  width: 15%;
-  height: 20%;
+  width: 25%;
+  height: 35%;
   left: 5%;
+  z-index: 5;
 }
 
 #FR {
   position: relative;
-  top: 5%;
-  left: 19%;
+  top: 3%;
+  left: 35%;
   background-color: black;
   border-radius:100%;
-  width:30%;
-  height:40%
+  width: 25%;
+  height: 30%;
+  border: none;
+  padding: 10px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: cornsilk;
+  cursor:  pointer;
 }
 
 #ENG {
@@ -52,24 +64,35 @@ export default {
   left: -5%;
   background-color: black;
   border-radius:100%;
-  width:30%;
-  height:40%
+  width: 25%;
+  height: 30%;
+  border: none;
+  padding: 10px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: cornsilk;
+  cursor:  pointer;
 }
 
 #PYC {
   position: relative;
-  top: -45%;
-  left: 42%;
+  top: 0;
+  left: 0;
   background-color: black;
   border-radius:100%;
-  width:30%;
-  height:40%
+  width: 25%;
+  height: 30%;
+  border: none;
+  padding: 10px;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  color: cornsilk;
+  cursor:  pointer;
 }
 
 .centerText{
   position: relative;
-  top: 30%;
-  color: slategray;
+  top: 5%;
 }
 
 </style>

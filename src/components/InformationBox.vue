@@ -41,7 +41,7 @@ export default {
   left: 39%;
   width: 45%;
   height: 50%;
-  background:black;
+  background: rgba(0, 0, 0, .7);
   -webkit-transform:skew(-30deg);
   -moz-transform:skew(-30deg);
   -o-transform:skew(-30deg);

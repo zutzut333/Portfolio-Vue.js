@@ -23,6 +23,11 @@ export default {
       SelectedTheme: 'undefined',
 
     }
+  },
+  computed: {
+    language(){
+      return this.$store.state.language ;
+    }
   }
 }
 </script>
