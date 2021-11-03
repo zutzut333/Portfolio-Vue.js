@@ -15,7 +15,7 @@
       <ul v-if="language === 'PYC'">
         <li>GitHub <br>
           <a style="color: yellow" href="https://github.com/zutzut333">https://github.com/zutzut333</a></li>
-        <li> My CV <br>
+        <li> мое резюме <br>
           <a style="color: yellow" href="https://drive.google.com/file/d/1EU4JrvD14iY2FTNTtl_8zleYejpGTA0L/view?usp=sharing">https://drive.google.com/file/d/1EU4JrvD14iY2FTNTtl_8zleYejpGTA0L/view?usp=sharing</a>
         </li>
       </ul>
@@ -23,7 +23,7 @@
       <ul v-if="language === 'FR'">
         <li>GitHub <br>
         <a style="color: yellow" href="https://github.com/zutzut333">https://github.com/zutzut333</a></li>
-        <li>  My CV <br>
+        <li>  Mon CV <br>
           <a style="color: yellow" href="https://drive.google.com/file/d/1mhEa0hzGcYUUBrysPEkSpaBJODRJE2vj/view?usp=sharing">https://drive.google.com/file/d/1mhEa0hzGcYUUBrysPEkSpaBJODRJE2vj/view?usp=sharing</a>
         </li>
       </ul>

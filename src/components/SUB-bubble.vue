@@ -7,7 +7,7 @@
        <table>
          <tr  class="whoText" v-if="language === 'ENG'"> &nbsp; I am Jean Bösch, <br>an 18-year-old <br> front-end developer from Switzerland </tr>
          <tr  class="whoText" v-else-if="language === 'FR'"> &nbsp; je m'appelle <br> Jean Bösch, un étudiant développeur <br> front-end de 18ans</tr>
-         <tr  class="whoText" v-else-if="language === 'PYC'"> &nbsp; меня зовут Жан Бёш, я 18-летний студент, занимающийся фронтенд-разработкой. </tr>
+         <tr  class="whoText" v-else-if="language === 'PYC'"> &nbsp; меня зовут Жан Бёш,<br> я 18-летний студент, занимающийся фронтенд-разработкой. </tr>
        </table>
     </div>
 
@@ -15,14 +15,14 @@
       <table style="height: 100%; width: 100%">
          <tr class="whatText" v-if="language === 'ENG'"> I have front-end <br> skills in vue.js <br> and PHP / SQL <br>   bases </tr>
          <tr class="whatText" v-if="language === 'FR'">  J'ai des <br>compétence <br>front-end en vue.js <br>et des bases en PHP/SQL </tr>
-         <tr class="whatText" v-if="language === 'PYC'"> У меня есть<br> фронтенд навыки работы с vue.js и базами на <br>PHP / SQL. </tr>
+         <tr class="whatText" v-if="language === 'PYC'"> У меня есть<br> фронтенд навыки <br> работы с vue.js и<br> базами на <br>PHP / SQL. </tr>
       </table>
     </div>
 
     <div v-else-if="Selected ===  'why'" id="whyBubble">
-      <tr class="whyText" v-if="language === 'ENG'"> Recruiting me <br> for  an internship means having a passionate and competent <br>developer for<br>  your projects </tr>
+      <tr class="whyText" v-if="language === 'ENG'"> Recruiting me <br> for  an internship means <br> having a passionate and competent <br>developer for<br>  your projects </tr>
       <tr class="whyText" v-if="language === 'FR'"> Me recruter en <br> stage c'est avoir un développeur passionné<br> et compétant pour vos projet </tr>
-      <tr class="whyText" v-if="language === 'PYC'"> Наем меня на стажировку означает наличие увлеченного и компетентного разработчика для <br> ваших проектов.</tr>
+      <tr class="whyText" v-if="language === 'PYC'"> Наем меня на <br>стажировку означает <br>наличие увлеченного и компетентного разработчика для <br> ваших проектов.</tr>
     </div>
 
 </template>
