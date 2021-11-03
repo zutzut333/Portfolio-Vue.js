@@ -12,17 +12,17 @@
     </div>
 
     <div v-else-if="Selected ===  'what'" id="whatBubble">
-      <table style="height: 100%">
-         <tr class="whatText" v-if="language === 'ENG'"> I3ch, <br>-end<br>developer from Switzerland </tr>
-         <tr class="whatText" v-if="language === 'FR'">  J'utilise Vue.js en <br> front-end. mais j'ai aussi compétences Back-end en SQL/PHP</tr>
-         <tr class="whatText" v-if="language === 'PYC'"> I3ch, <br>-end<br>developer from Switzerland </tr>
+      <table style="height: 100%; width: 100%">
+         <tr class="whatText" v-if="language === 'ENG'"> I have front-end <br> skills in vue.js <br> and PHP / SQL <br>   bases </tr>
+         <tr class="whatText" v-if="language === 'FR'">  J'ai des <br>compétence <br>front-end en vue.js <br>et des bases en PHP/SQL </tr>
+         <tr class="whatText" v-if="language === 'PYC'"> У меня есть<br> фронтенд навыки работы с vue.js и базами на <br>PHP / SQL. </tr>
       </table>
     </div>
 
     <div v-else-if="Selected ===  'why'" id="whyBubble">
-      <tr v-if="language === 'ENG'"> I3ch, <br>-end<br>developer from Switzerland </tr>
-      <tr v-if="language === 'FR'"> I3ch, <br>-end<br>developer from Switzerland </tr>
-      <tr v-if="language === 'PYC'"> I3ch, <br>-end<br>developer from Switzerland </tr>
+      <tr class="whyText" v-if="language === 'ENG'"> Recruiting me <br> for  an internship means having a passionate and competent <br>developer for<br>  your projects </tr>
+      <tr class="whyText" v-if="language === 'FR'"> Me recruter en <br> stage c'est avoir un développeur passionné<br> et compétant pour vos projet </tr>
+      <tr class="whyText" v-if="language === 'PYC'"> Наем меня на стажировку означает наличие увлеченного и компетентного разработчика для <br> ваших проектов.</tr>
     </div>
 
 </template>
@@ -92,7 +92,7 @@ export default {
   font-size: 33px;
   font-family: Arial,serif ;
   position: relative;
-  top: 10%;
+  top: 25px;
 }
 
 #whyBubble{
@@ -105,6 +105,15 @@ export default {
   top: 15%;
   transition-duration: 2s;
   z-index: 40;
+}
+
+.whyText{
+  line-height: 120%;
+  word-spacing: 5px;
+  font-size: 30px;
+  font-family: Arial,serif ;
+  position: relative;
+  top: 25px;
 }
 
 </style>

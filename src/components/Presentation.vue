@@ -10,7 +10,7 @@
       <table id="what" @mouseover="SelectedTheme = 'what'">
         <tr v-if="language === 'ENG'">What I know ? </tr>
         <tr v-if="language === 'PYC'">Что я знаю ? </tr>
-        <tr v-if="language === 'FR'"> Qui sais-je ? </tr>
+        <tr v-if="language === 'FR'"> Que sais-je ? </tr>
       </table>
       <table id="why" @mouseover="SelectedTheme = 'why'">
         <tr v-if="language === 'ENG'">Why me ? </tr>
@@ -132,7 +132,7 @@ export default {
 #why {
   position: relative;
   top: 34%;
-  width: 40%;
+  width: 50%;
   left: 10%;
   font-size: xxx-large;
   border-radius: 100px;
