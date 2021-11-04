@@ -1,6 +1,12 @@
 <template>
-  <div id="app">
+
+  <div v-if="screen.width >= 1000" id="app">
     <Home/>
+  </div>
+  <div v-else-if="screen.height < 1000">
+    
+    we are sorry but the site isn't ready for your resolution
+
   </div>
 </template>
 
@@ -32,6 +38,7 @@
 <script>
 import Home from "@/views/Home";
 export default {
-  components: {Home}
+  components: {Home},
+
 }
 </script>
