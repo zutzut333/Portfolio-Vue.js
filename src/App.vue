@@ -1,10 +1,10 @@
 <template>
 
-  <div v-if="screen.width >= 1000" id="app">
+  <div v-if="screen.width >= 200" id="app">
     <Home/>
   </div>
-  <div v-else-if="screen.height < 1000">
-    
+  <div v-else-if="screen.width < 200">
+
     we are sorry but the site isn't ready for your resolution
 
   </div>
